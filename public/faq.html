@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+
+  <!-- fontawesome -->
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/duotone.css" integrity="sha384-R3QzTxyukP03CMqKFe0ssp5wUvBPEyy9ZspCB+Y01fEjhMwcXixTyeot+S40+AjZ" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/fontawesome.css" integrity="sha384-eHoocPgXsiuZh+Yy6+7DsKAerLXyJmu2Hadh4QYyt+8v86geixVYwFqUvMU8X90l" crossorigin="anonymous" />
+
+  <!-- Google fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;600&family=Inter:wght@100;300;400;500;600;700;800&family=Island+Moments&family=Spline+Sans:wght@300&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+
+
+  <!-- Master CSS  -->
+  <link rel="stylesheet" href="/stylesheets/master.css">
+
+  <title>EAGLES, a stress-free property managment</title>
+</head>
+
+<body class="d-flex flex-column vh-100">
+
+  <!-- NAVBAR
+     ================================================== -->
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-black fixed-top navbar-custom shadow-5-strong">
+      <div class="container">
+        <a class="navbar-brand" href="/">EAGLES</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" onclick="change()">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link nav-home" href="/">home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link nav-about nav-link-name active" href="/about.html">about</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                services
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="/property.html">property managment</a></li>
+                <li>
+                  <hr class="dropdown-divider">
+                </li>
+                <li><a class="dropdown-item" href="/development.html">development</a></li>
+                <li>
+                  <hr class="dropdown-divider">
+                </li>
+                <li><a class="dropdown-item" href="/construction.html">construction managment</a></li>
+                <li>
+                  <hr class="dropdown-divider">
+                </li>
+                <li><a class="dropdown-item" href="/facilities.html">facilities management</a></li>
+                <li>
+                  <hr class="dropdown-divider">
+                </li>
+                <li><a class="dropdown-item" href="/investment.html">investments</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/faq.html">FAQs</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/contact.html">contact</a>
+            </li>
+          </ul>
+          <ul class="nav nav-gap-sm navbar-nav nav-social align-items-center text-white">
+            <li class="nav-item nav-social-media">
+              <a href="#" class="nav-link">
+                <svg width="7" height="15" viewBox="0 0 10 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M8.17421 3.65234H9.99996V0.154687C9.68557 0.107422 8.60224 0 7.34088 0C4.70831 0 2.90529 1.82188 2.90529 5.16914V8.25H0V12.1602H2.90529V22H6.46588V12.1602H9.25375L9.69693 8.25H6.46588V5.55586C6.46588 4.42578 6.7424 3.65234 8.17421 3.65234Z"
+                    fill="currentColor" />
+                </svg>
+              </a>
+            </li>
+            <li class="nav-item nav-social-media">
+              <a href="#" class="nav-link">
+                <svg width="17" height="14" viewBox="0 0 25 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M22.0706 5.51356C22.086 5.73504 22.086 5.95656 22.086 6.17804C22.086 12.9334 17.0783 20.7172 7.92575 20.7172C5.10601 20.7172 2.48661 19.8787 0.283203 18.4232C0.683835 18.4707 1.069 18.4865 1.48505 18.4865C3.81167 18.4865 5.95347 17.6797 7.6638 16.3033C5.47581 16.2558 3.64221 14.7845 3.01046 12.7594C3.31865 12.8069 3.6268 12.8385 3.9504 12.8385C4.39723 12.8385 4.84411 12.7752 5.2601 12.6645C2.97968 12.1898 1.2693 10.1332 1.2693 7.64935V7.58609C1.93183 7.96579 2.70231 8.20309 3.5189 8.2347C2.17837 7.31709 1.30013 5.75086 1.30013 3.97894C1.30013 3.02972 1.54661 2.15959 1.97807 1.40019C4.42801 4.50103 8.11063 6.52604 12.24 6.74756C12.163 6.36787 12.1168 5.97239 12.1168 5.57687C12.1168 2.76076 14.3356 0.466797 17.0937 0.466797C18.5266 0.466797 19.8209 1.0838 20.73 2.0805C21.8548 1.85902 22.9334 1.43184 23.8887 0.846495C23.5189 2.03307 22.7331 3.02977 21.7008 3.66255C22.7023 3.55186 23.673 3.26702 24.5667 2.87155C23.8888 3.88403 23.0413 4.78577 22.0706 5.51356Z"
+                    fill="currentColor" />
+                </svg>
+              </a>
+            </li>
+            <li class="nav-item nav-social-media">
+              <a href="#" class="nav-link">
+                <svg width="15" height="15" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M11.2827 5.3166C8.24087 5.3166 5.78732 7.8148 5.78732 10.912C5.78732 14.0092 8.24087 16.5074 11.2827 16.5074C14.3245 16.5074 16.7781 14.0092 16.7781 10.912C16.7781 7.8148 14.3245 5.3166 11.2827 5.3166ZM11.2827 14.5497C9.31698 14.5497 7.70998 12.9183 7.70998 10.912C7.70998 8.90563 9.3122 7.27425 11.2827 7.27425C13.2532 7.27425 14.8554 8.90563 14.8554 10.912C14.8554 12.9183 13.2484 14.5497 11.2827 14.5497ZM18.2846 5.08772C18.2846 5.81331 17.7107 6.39282 17.0029 6.39282C16.2902 6.39282 15.7211 5.80844 15.7211 5.08772C15.7211 4.36699 16.295 3.78261 17.0029 3.78261C17.7107 3.78261 18.2846 4.36699 18.2846 5.08772ZM21.9243 6.4123C21.843 4.66404 21.4508 3.11545 20.1929 1.83956C18.9399 0.563678 17.419 0.164355 15.7019 0.0766992C13.9323 -0.0255664 8.62827 -0.0255664 6.85865 0.0766992C5.14643 0.159486 3.62552 0.558809 2.36766 1.83469C1.10979 3.11058 0.722392 4.65917 0.636302 6.40743C0.535865 8.20925 0.535865 13.6098 0.636302 15.4117C0.717609 17.1599 1.10979 18.7085 2.36766 19.9844C3.62552 21.2603 5.14165 21.6596 6.85865 21.7473C8.62827 21.8495 13.9323 21.8495 15.7019 21.7473C17.419 21.6645 18.9399 21.2652 20.1929 19.9844C21.446 18.7085 21.8382 17.1599 21.9243 15.4117C22.0247 13.6098 22.0247 8.21412 21.9243 6.4123ZM19.6381 17.345C19.2651 18.2995 18.5429 19.0348 17.6007 19.4195C16.1898 19.9893 12.8419 19.8578 11.2827 19.8578C9.72352 19.8578 6.37081 19.9844 4.96469 19.4195C4.02727 19.0397 3.30507 18.3043 2.92724 17.345C2.36766 15.9084 2.49679 12.4995 2.49679 10.912C2.49679 9.32443 2.37244 5.91071 2.92724 4.47899C3.30029 3.52451 4.02248 2.78917 4.96469 2.40446C6.37559 1.83469 9.72352 1.96618 11.2827 1.96618C12.8419 1.96618 16.1946 1.83956 17.6007 2.40446C18.5381 2.7843 19.2603 3.51964 19.6381 4.47899C20.1977 5.91558 20.0686 9.32443 20.0686 10.912C20.0686 12.4995 20.1977 15.9133 19.6381 17.345Z"
+                    fill="currentColor" />
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- FAQ PAGE BODY
+           ===================================================-->
+
+  <section class="faq-image-section">
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <div class="faq-top faq-cover"></div>
+        </div>
+      </div> <!-- / .row -->
+    </div> <!-- / .container -->
+  </section>
+
+  <section class="faq-section">
+    <div class="banner banner-dark shape-parent">
+      <div class="shape align-items-end mb-n160">
+        <svg class="mb-n160 faq-circle" data-rellax-speed="-1" width="518" height="641" viewBox="0 0 518 641" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="197.5" cy="320.5" r="320.5" fill="#F5F5F5" />
+        </svg>
+      </div>
+      <div class="container faq-content">
+        <div class="row justify-content-center">
+          <div class="col-12 col-lg-7 text-center">
+            <div class="subtitle-div">
+              <p class="subtitle">help center</p>
+            </div>
+            <div>
+              <h1 class="h3">Need Help? Browse our frequently asked question.</h1>
+            </div>
+          </div>
+        </div>
+        <div class="row justify-content-center about-us-div">
+          <div class="col-md-8">
+            <div class="faq">
+              <div class="faq-item">
+                <a class="faq-item-heading" data-bs-toggle="collapse" href="#faq-item-content-1" role="button" aria-expanded="false" aria-controls="faq-item-content-1">
+                  How do I get started?
+                </a>
+                <div class="faq-item-content collapse" id="faq-item-content-1">
+                  <div class="card card-body">
+                    <p class="faq-item-p">
+                      In most cases, once we receive a signed property management agreement (which is typically handled digitally, not in person) and keys to your property, we will begin marketing your home! Often though, when a home is occupied or
+                      not
+                      in the best of shape, it is financially beneficial to wait for a vacant / cleaned-up presentation. In all cases we do an immediate inspection and assess the situation, then communicate with you as to what we recommend, and what
+                      you are comfortable with. We recognize that time is money in rental investing so we move very swiftly once you sign up.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <hr>
+              <div class="faq-item">
+                <a class="faq-item-heading" data-bs-toggle="collapse" href="#faq-item-content-2" role="button" aria-expanded="false" aria-controls="faq-item-content-2">
+                  How long do we sign an agreement for?
+                </a>
+                <div class="faq-item-content collapse" id="faq-item-content-2">
+                  <div class="card card-body">
+                    <p class="faq-item-p">
+                      We do sign an agreement, but mainly to avoid any misunderstanding; it's cancelable at any time; there is never a cancellation fee and our service comes with a three-month money back guaranteed.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <hr>
+              <div class="faq-item">
+                <a class="faq-item-heading" data-bs-toggle="collapse" href="#faq-item-content-3" role="button" aria-expanded="false" aria-controls="faq-item-content-1">
+                  What types of properties do you manage?
+                </a>
+                <div class="faq-item-content collapse" id="faq-item-content-3">
+                  <div class="card card-body">
+                    <p class="faq-item-p">
+                      We manage single-family houses, condos, and townhomes. We also specialize in multi-family buildings such as apartment complexes and multiplexes.
+
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <hr>
+              <div class="faq-item">
+                <a class="faq-item-heading" data-bs-toggle="collapse" href="#faq-item-content-4" role="button" aria-expanded="false" aria-controls="faq-item-content-2">
+                  What is the rental process?
+                </a>
+                <div class="faq-item-content collapse" id="faq-item-content-4">
+                  <div class="card card-body">
+                    <p class="faq-item-p">
+                      When someone is interested in your property, they can easily apply online 24/7. Some of our application procedure involves: </p>
+                    <p class="faq-item-p">· A background check  <br>· Current employee / income verification <br> · Past rental history 
+                    </p>
+
+                    <p class="faq-item-p">If the applicant passes our screening process, we will instruct them to pay the security deposit within 24 hours, or risk losing the home. We
+                      collect at least one full month’s rent as a deposit, but often much more. We will then execute the lease and send a finalized copy to you.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <hr>
+              <div class="faq-item">
+                <a class="faq-item-heading" data-bs-toggle="collapse" href="#faq-item-content-5" role="button" aria-expanded="false" aria-controls="faq-item-content-2">
+                  What will you do to rent my property?
+                </a>
+                <div class="faq-item-content collapse" id="faq-item-content-5">
+                  <div class="card card-body">
+                    <p class="faq-item-p">
+                      Most importantly, we will treat the home as if it’s our own. Great presentations bring in substantially more high-quality leads, which leads to superior tenant selection, which leads to less vacancy, less maintenance, and fewer
+                      turnover costs.
+
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <hr>
+              <div class="faq-item">
+                <a class="faq-item-heading" data-bs-toggle="collapse" href="#faq-item-content-6" role="button" aria-expanded="false" aria-controls="faq-item-content-2">
+                  How often do you check on my property?
+                </a>
+                <div class="faq-item-content collapse" id="faq-item-content-6">
+                  <div class="card card-body">
+                    <p class="faq-item-p">
+                      The first step is our initial evaluation of your property. One of our managers will come out and go through the house and assess the condition and give recommendations and suggestions to maximize the rental value and minimize
+                      risk. They also do a benefit analysis and plot different rent scenarios against your expenses, so you can see what the cash flow would look like.
+
+                    </p>
+                    <p class="faq-item-p">
+                      Prior to the tenant moving in we conduct a move-in evaluation. We do it again when they move out. If there is maintenance needed, our techs will fill out a property form which gives us more eyes looking at your property.
+
+                    </p>
+                    <p class="faq-item-p">
+                      Houses do wear out - everything from roofs to floor covering to appliances, therefore, the managers do annual evaluations noting how things are holding up.
+
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <hr>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div> <!-- banner -->
+
+  </section>
+
+  <!-- LINKS
+               ================================================== -->
+  <section class="section-faq-bottom">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-12 col-lg-7 text-center">
+          <div class="">
+            <p class="subtitle">additional resources</p>
+          </div>
+          <div>
+            <h1 class="h3">Still confused? Contact our wonderful customer service department.</h1>
+          </div>
+        </div>
+      </div>
+    </div> <!-- / .container -->
+  </section>
+
+  <section class="faq-contact-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-2 d-md-block"></div>
+        <div class="col-md-8">
+          <div class="row justify-content-center">
+            <div class="col-md-6">
+              <a href="/contact" class="card info-card mb-3 mb-md-0">
+                <div class="card-body info-card-body">
+                  <div class="info-card-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" fill="currentColor" class="bi bi-at" viewBox="0 0 16 16">
+                      <path
+                        d="M13.106 7.222c0-2.967-2.249-5.032-5.482-5.032-3.35 0-5.646 2.318-5.646 5.702 0 3.493 2.235 5.708 5.762 5.708.862 0 1.689-.123 2.304-.335v-.862c-.43.199-1.354.328-2.29.328-2.926 0-4.813-1.88-4.813-4.798 0-2.844 1.921-4.881 4.594-4.881 2.735 0 4.608 1.688 4.608 4.156 0 1.682-.554 2.769-1.416 2.769-.492 0-.772-.28-.772-.76V5.206H8.923v.834h-.11c-.266-.595-.881-.964-1.6-.964-1.4 0-2.378 1.162-2.378 2.823 0 1.737.957 2.906 2.379 2.906.8 0 1.415-.39 1.709-1.087h.11c.081.67.703 1.148 1.503 1.148 1.572 0 2.57-1.415 2.57-3.643zm-7.177.704c0-1.197.54-1.907 1.456-1.907.93 0 1.524.738 1.524 1.907S8.308 9.84 7.371 9.84c-.895 0-1.442-.725-1.442-1.914z" />
+                    </svg>
+                  </div>
+                  <h5 class="info-card-title">
+                    Contact support
+                  </h5>
+                  <p class="card-text">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit deserunt vero pariatur.
+                  </p>
+                </div>
+              </a> <!-- / .card -->
+            </div>
+            <div class="col-md-6">
+              <a href="tel:614-759-9026" class="card info-card mb-3 mb-md-0">
+                <div class="card-body info-card-body">
+                  <div class="info-card-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor" class="bi bi-phone" viewBox="0 0 16 16">
+                      <path d="M11 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h6zM5 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H5z" />
+                      <path d="M8 14a1 1 0 1 0 0-2 1 1 0 0 0 0 2z" />
+                    </svg>
+                  </div>
+                  <h5 class="info-card-title">
+                    Call us
+                  </h5>
+                  <p class="card-text">
+                    Lorem ipsum dolor sit amet, consectetur dollar amite <br>614-759-9026
+                  </p>
+                </div>
+              </a> <!-- / .card -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER SECTION
+        ================================================== -->
+
+  <section class="footer-section footer text-white sticky-bottom">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="footer-brand">
+            <a href="/" class="">
+              <h2>EAGLES</h2>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="d-none d-lg-block col-5"></div>
+        <div class="col-lg-6 footer-pages">
+          <div class="row">
+            <div class="col-lg-3">
+              <ul class="nav flex-column text-white footer-ul">
+                <li class="nav-item">
+                  <a href="/" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a href="/about.html" class="nav-link">About us</a>
+                </li>
+                <li class="nav-item">
+                  <a href="/services.html" class="nav-link">Services</a>
+                </li>
+                <!-- <li class="nav-item">
+                  <a href="/job" class="nav-link">Careers</a>
+                </li> -->
+              </ul>
+            </div>
+            <div class="col-lg-3">
+              <ul class="nav flex-column text-white footer-ul footer-ul-mobile">
+                <li class="nav-item">
+                  <a href="/faq.html" class="nav-link">FAQ</a>
+                </li>
+                <li class="nav-item">
+                  <a href="/contact.html" class="nav-link">Contact us</a>
+                </li>
+              </ul>
+            </div>
+            <div class="col-lg-3">
+              <ul class="nav flex-column text-white footer-ul footer-ul-mobile">
+                <li class="nav-item">
+                  <a href="/privacy.html" class="nav-link">Privacy</a>
+                </li>
+                <li class="nav-item">
+                  <a href="#" class="nav-link">Terms of Use</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-6 ">
+          <ul class="nav text-white align-items-center footer-pages footer-social">
+            <li class="nav-item nav-social-media">
+              <a href="#" class="nav-link">
+                <svg width="10" height="22" viewBox="0 0 10 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M8.17421 3.65234H9.99996V0.154687C9.68557 0.107422 8.60224 0 7.34088 0C4.70831 0 2.90529 1.82188 2.90529 5.16914V8.25H0V12.1602H2.90529V22H6.46588V12.1602H9.25375L9.69693 8.25H6.46588V5.55586C6.46588 4.42578 6.7424 3.65234 8.17421 3.65234Z"
+                    fill="currentColor" />
+                </svg>
+              </a>
+            </li>
+            <li class="nav-item nav-social-media">
+              <a href="#" class="nav-link">
+                <svg width="25" height="21" viewBox="0 0 25 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M22.0706 5.51356C22.086 5.73504 22.086 5.95656 22.086 6.17804C22.086 12.9334 17.0783 20.7172 7.92575 20.7172C5.10601 20.7172 2.48661 19.8787 0.283203 18.4232C0.683835 18.4707 1.069 18.4865 1.48505 18.4865C3.81167 18.4865 5.95347 17.6797 7.6638 16.3033C5.47581 16.2558 3.64221 14.7845 3.01046 12.7594C3.31865 12.8069 3.6268 12.8385 3.9504 12.8385C4.39723 12.8385 4.84411 12.7752 5.2601 12.6645C2.97968 12.1898 1.2693 10.1332 1.2693 7.64935V7.58609C1.93183 7.96579 2.70231 8.20309 3.5189 8.2347C2.17837 7.31709 1.30013 5.75086 1.30013 3.97894C1.30013 3.02972 1.54661 2.15959 1.97807 1.40019C4.42801 4.50103 8.11063 6.52604 12.24 6.74756C12.163 6.36787 12.1168 5.97239 12.1168 5.57687C12.1168 2.76076 14.3356 0.466797 17.0937 0.466797C18.5266 0.466797 19.8209 1.0838 20.73 2.0805C21.8548 1.85902 22.9334 1.43184 23.8887 0.846495C23.5189 2.03307 22.7331 3.02977 21.7008 3.66255C22.7023 3.55186 23.673 3.26702 24.5667 2.87155C23.8888 3.88403 23.0413 4.78577 22.0706 5.51356Z"
+                    fill="currentColor" />
+                </svg>
+              </a>
+            </li>
+            <li class="nav-item nav-social-media">
+              <a href="#" class="nav-link">
+                <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M11.2827 5.3166C8.24087 5.3166 5.78732 7.8148 5.78732 10.912C5.78732 14.0092 8.24087 16.5074 11.2827 16.5074C14.3245 16.5074 16.7781 14.0092 16.7781 10.912C16.7781 7.8148 14.3245 5.3166 11.2827 5.3166ZM11.2827 14.5497C9.31698 14.5497 7.70998 12.9183 7.70998 10.912C7.70998 8.90563 9.3122 7.27425 11.2827 7.27425C13.2532 7.27425 14.8554 8.90563 14.8554 10.912C14.8554 12.9183 13.2484 14.5497 11.2827 14.5497ZM18.2846 5.08772C18.2846 5.81331 17.7107 6.39282 17.0029 6.39282C16.2902 6.39282 15.7211 5.80844 15.7211 5.08772C15.7211 4.36699 16.295 3.78261 17.0029 3.78261C17.7107 3.78261 18.2846 4.36699 18.2846 5.08772ZM21.9243 6.4123C21.843 4.66404 21.4508 3.11545 20.1929 1.83956C18.9399 0.563678 17.419 0.164355 15.7019 0.0766992C13.9323 -0.0255664 8.62827 -0.0255664 6.85865 0.0766992C5.14643 0.159486 3.62552 0.558809 2.36766 1.83469C1.10979 3.11058 0.722392 4.65917 0.636302 6.40743C0.535865 8.20925 0.535865 13.6098 0.636302 15.4117C0.717609 17.1599 1.10979 18.7085 2.36766 19.9844C3.62552 21.2603 5.14165 21.6596 6.85865 21.7473C8.62827 21.8495 13.9323 21.8495 15.7019 21.7473C17.419 21.6645 18.9399 21.2652 20.1929 19.9844C21.446 18.7085 21.8382 17.1599 21.9243 15.4117C22.0247 13.6098 22.0247 8.21412 21.9243 6.4123ZM19.6381 17.345C19.2651 18.2995 18.5429 19.0348 17.6007 19.4195C16.1898 19.9893 12.8419 19.8578 11.2827 19.8578C9.72352 19.8578 6.37081 19.9844 4.96469 19.4195C4.02727 19.0397 3.30507 18.3043 2.92724 17.345C2.36766 15.9084 2.49679 12.4995 2.49679 10.912C2.49679 9.32443 2.37244 5.91071 2.92724 4.47899C3.30029 3.52451 4.02248 2.78917 4.96469 2.40446C6.37559 1.83469 9.72352 1.96618 11.2827 1.96618C12.8419 1.96618 16.1946 1.83956 17.6007 2.40446C18.5381 2.7843 19.2603 3.51964 19.6381 4.47899C20.1977 5.91558 20.0686 9.32443 20.0686 10.912C20.0686 12.4995 20.1977 15.9133 19.6381 17.345Z"
+                    fill="currentColor" />
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-lg-6 footer-pages">
+          <p class="text-white text-muted copyright">
+            <small>
+              &copy; Copyright <span class="current-year"></span> Eagles. All rights reserved.
+            </small>
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Bootstrap JavaScript plugins and Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js" integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj" crossorigin="anonymous"></script>
+</body>
+
+</html>
