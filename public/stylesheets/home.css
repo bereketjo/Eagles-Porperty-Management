@@ -133,6 +133,16 @@ body {
   margin-top: -100px;
 }
 
+.moon {
+  display: none;
+}
+
+@media screen and (min-width: 1200px) {
+  .moon {
+    display: block;
+  }
+}
+
 .subtitle-div {
   margin-top: -400px;
 }
@@ -369,15 +379,26 @@ body {
   padding-bottom: 7.5rem;
 }
 
+
+
 .underline {
   border-bottom: 1.5px solid currentColor;
   padding-bottom: 17px;
   display: inline-block;
 }
 
+
+
 .invitation-h1 {
-  font-size: 6rem;
+  font-size: 3rem;
   font-weight: 400;
+}
+
+@media screen and (min-width: 1200px) {
+  .invitation-h1 {
+    font-size: 6rem;
+    font-weight: 400;
+  }
 }
 
 .invitation-body {
